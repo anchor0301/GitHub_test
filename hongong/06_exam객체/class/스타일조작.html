@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const divs = document.querySelectorAll("div")
+
+            divs.forEach((div, index) => {
+
+                const val = index * 10
+                div.style.height = "20px"
+                div.style.backgroundColor = `rgba(${val}, ${val}, ${val})`
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

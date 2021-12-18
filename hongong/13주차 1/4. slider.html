@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		#xx{
+			border:2px solid blue;
+			width:30vw;
+			position: right;}
+
+		
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+	<script>
+		$(function(){
+			$("#vol").change(function(){
+				$("#xx").text($(this).val())
+
+			})
+		})
+	</script>
+</head>
+<body>
+	<div>
+		<label for="vol">볼륨</label>
+		<input id="vol" type="range" size="5"
+		 min=0 max=100 step=1 defaultValue="20"
+		 data-hightlight="true" >
+
+	</div>
+
+	<div id="xx"> 임시</div>
+</body>
+</html>

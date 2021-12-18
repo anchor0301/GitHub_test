@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+        
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style>
+        
+    </style>
+    <script src="../../jquery-3.6.0.min.js"></script>
+    <script> 
+    $(function(){
+        $("img").css("width","100px")
+         $("img").attr("src","cosmos.jpg")
+    $("#aa").html("<b>원래 그림 : " + $("img").attr("src")+"</b>")
+
+    $("#b1").click(function(){
+        
+        $("img").attr("src","sss.jpg")
+      $("#aa").html($("#aa").html()+
+                        "<hr><b>" + $("img").attr("src")+"</b>")                            
+    })
+
+    $("#b2").click(function(){
+        $("img").removeAttr("src")
+        $("#aa").html("Remove attr...")
+    })
+
+    })
+   
+    </script>
+</head>
+<body>
+    <p>그림<img>이다.</p>
+    <hr>
+    <button id="b1">그림 변경</button>
+    <button id="b2">속성 제거</button>
+    <p id="aa"></p>
+
+</body>
+</html>

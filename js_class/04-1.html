@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>레포트 </title>
+    <style>
+
+    </style>
+    <script>
+        let output = ""
+        
+        size = Number(prompt("피라미드를 몇 층까지 쌓을까요?","숫자 입력"))
+
+
+        for (let i = 1; i < size; i++) { //피라미드 층수
+
+            for (let j = size; j > i; j--) {
+                output += " "
+            }
+            for (let k = 0; k < 2 * i - 1; k++) {
+                output += '*'
+            }
+
+            output += '\n'
+        }
+
+        for (let i = size; i > 0; i-- ){ //피라미드 층수
+
+            for (let j = size; j > i; j--) {
+                output += " "
+            }
+            for (let k = 0; k < 2 * i - 1; k++) {
+                output += '*'
+            }
+
+            output += '\n'
+        }
+        document.write("콘솔창을 확인하세요")
+        console.log(output)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

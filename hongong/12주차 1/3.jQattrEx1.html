@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#bt1").click(function(){
+				$("#img1").attr("src","img/bg.png")
+				$("#img1").before("<p id='p0'> test for before</p>")
+				$("#img1").after('<p id="p1"> test for after</p>')
+
+			})
+			
+			$("#bt2").click(function(){
+				$("p:even").css("fontSize","40px").html("<p>성민!!</p>")
+			})
+
+
+
+		})
+			
+		
+	</script>
+</head>
+<body>
+	<img src="img/lion.png" id="img1" alt=""> <hr>
+	<button id="bt1">그림 바뀜</button>
+	<button id="bt2"> 추가한 글색 변경</button>
+	<button id="bt3"> js로 동작</button>
+
+	<script>
+		$(function(){
+			aa=document.getElementsByTagName("p")
+			aa[0].style.background="red"
+			aa[1].style.background="green"
+		})
+		
+			
+	</script>
+</body>
+</html>

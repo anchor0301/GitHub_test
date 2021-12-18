@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>주사위 만들기 </title>
+    <script>
+
+        let A = [] //빈 배열
+        let sum = 0
+
+        //math.random을 이용해서 배열에 숫자넣기
+        for (let i = 0; i < 6; i++) {
+            //1~6까지의 정수
+            A.push(A[i] = Math.ceil(Math.random() * 6))
+        }
+        //나머지 함수를 이용해서 전부 더하기
+        console.log(...A)
+        for (let value of A) {
+            sum += value
+        }
+        let aaaa = sum
+        document.write("<h1> 랜덤숫자 총합 : " + aaaa + "</h1>")
+
+
+
+        for (let i = 0; i < A.length; i++) {
+
+            document.write("   " + A[i])
+        }
+        //filter를 이용해서 짝수만 필터링
+        const xxxx = A.filter((value, array) => value % 2 === 0)
+        document.write("<hr><h1> 짝수만 필터링" + xxxx + "</h1>")
+
+        const xxx = A.filter((value, array) => value % 2 === 1)
+        document.write("<hr><h1> 홀수만 필터링" + xxx + "</h1><hr>")
+    </script>
+</head>
+
+<body>
+    <h1>랜덤 주사위</h1>
+    <h2> F5를 눌러 새로 고쳐보세요</h2>
+</body>
+
+</html>

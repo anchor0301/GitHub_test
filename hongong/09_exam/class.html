@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <script>
+
+        class StudentList {
+            constructor() {
+                this.list = []
+            }
+
+            add(student) {
+                this.list.push(student)
+            }
+
+            printTable() {
+                let output = "이름\t총점\t평균\n"
+                for (const student of this.list) {
+                    output += `${student.이름}\t ${student.getSum()}\t ${student.getAvg()}\n`
+                }
+                console.log(output)
+            }
+        }
+        class Student {
+
+
+
+
+            //생성자
+            constructor(이름, 국어, 영어, 수학, 과학) {
+                this.이름 = 이름
+                this.국어 = 국어
+                this.영어 = 영어
+                this.수학 = 수학
+                this.과학 = 과학
+            }
+
+            //메소드
+            getSum() {
+                return this.국어 + this.영어 + this.수학 + this.과학
+            }
+            getAvg() {
+                return this.getSum() / 4
+            }
+
+        }
+
+       
+        const students = new StudentList()
+        students.add(new Student("구름", 87, 98, 77, 40))
+
+        students.add(new Student("별이", 92, 58, 36, 23))
+        students.add(new Student("겨울", 79, 96, 94, 86))
+        students.add(new Student("바다", 98, 52, 98, 92))
+
+        students.printTable()
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

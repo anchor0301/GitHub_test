@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+        
+<head>
+    <meta charset="UTF-8">
+    <title>setAttribute</title>
+    <style>
+        
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            const imgs = document.querySelector("img")
+            imgs.setAttribute("src","http://placekitten.com/200/200")
+            document.querySelector("h1").innerHTML=imgs.getAttribute("src")
+        })
+    </script>
+</head>
+<body>
+    <img src="" alt="">
+    <h1></h1>
+</body>
+</html>

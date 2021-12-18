@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const h1 = document.createElement("h1")
+            h1.textContent="반가워요~"
+
+            const divA = document.querySelector(".first")
+            const divB = document.querySelector(".second")
+            
+            const toFirst = ()=>{
+                divA.appendChild(h1)
+                setTimeout(toSecond,500)
+            }
+            const toSecond= () =>{
+                divB.appendChild(h1)
+                setTimeout(toFirst,500)
+            }
+            divA.appendChild(h1)
+            h1.removeChild(h1)
+        })
+    </script>
+</head>
+
+<body>
+    <div class="first">
+        <h1> 첫번째 div 태그 내부</h1>
+    </div>
+    <hr>
+    <div class="second">
+        <h1> 두번째 div 태그 내부</h1>
+    </div>
+</body>
+
+</html>

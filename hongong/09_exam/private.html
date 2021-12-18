@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    </style>
+    <script>
+
+        class Square {
+            //private
+            #length
+            constructor(length){
+                if(length<0){
+                    throw "길이는 0이상이여한다."
+                }
+                this.#length =length
+            }
+
+            getArea(){
+                
+                return this.#length*this.#length
+            }
+            getPerimeter(){
+                return 4*this.#length
+            }
+
+            set length(length){
+                if(length<0){
+                    throw "길이는 0이상이여한다."
+                }
+                this.#length =length
+            }
+
+            get length(){
+                return this.#length
+            }
+
+        }
+
+        const square = new Square("10")
+        console.log(square.getArea())
+        console.log(square.getPerimeter())
+
+        console.log("랭스",square.length)
+        square.length = 20
+        console.log("랭스",square.length)
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

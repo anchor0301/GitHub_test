@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.createElement("button")
+            document.body.appendChild(header)
+
+            let count = 0
+            header.style.userSelect = "none"
+            //header테그에 글적기
+            header.innerText = "주사위 시작"
+
+            //랜덤 주사위를 500번 던져서 D배열에저장 
+            D = []//주사위 저장 
+            x=[7]//배열
+            for (let i = 0; i < 500; i++) {
+                D.push(D[i] = Math.ceil(Math.random() * 6))
+            }
+            countt=0
+           D.forEach((value, index) => {
+                
+                console.log(`${index}번째 값 ${value}`)
+
+               
+               
+               
+            })
+            
+           
+
+            
+
+            header.addEventListener("click", () => {
+                count++
+                if (count % 2 == 0) {
+                    document.body.style.backgroundColor = "yellow"
+                } else {
+                    document.body.style.backgroundColor = "cyan"
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

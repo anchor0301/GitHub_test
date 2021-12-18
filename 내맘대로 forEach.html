@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+			#box{
+					width:150px;
+					height:150px;
+					border:black 1px solid;
+					position: relative;
+				}
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+	<script>
+		count=0
+		$(function(){
+
+				$("img").mouseenter(function(){
+					$(this).width(500)
+				})
+				$("img").mouseleave(function(){
+					$(this).width("150px")
+				})
+			
+			$('#bt1').click(function(){
+				
+				$("img").attr("src","/hongong/12주차 1/img/lion.png")
+				count++
+				if(count>1){
+					$("img").removeAttr("src")
+				}
+			})//click
+				
+			list=[1,2,3,4,5]
+			a=0
+
+		let new_list= list.filter(function(value){
+			return value%2==0
+
+		})
+
+		$(new_list).each(function(index,value){
+			a+=value
+			document.get
+		})
+		$("p").append(a)
+			
+		$("#bt1").mousedown(function(){
+			$("body").css("background","cyan")
+		})
+		}) //function
+	</script>
+</head>
+<body>
+	<Button id='bt1'> 클릭 </Button>
+	
+				<img src="sky.jpg" alt="" width="200px" height="200px">
+	
+	<br>
+	<a href="pdf/test.pdf" download="테스트">테스트 문서 다운로드</a>
+	<p>하</p>
+</body>
+</html>

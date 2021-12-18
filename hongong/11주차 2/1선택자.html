@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		div{border:20px solid red}
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded",function(){
+
+		})
+		$(document).ready(function(){ })
+		$(function(){
+			
+		})
+		//document.addEventListener("DOMContentLoaded",function(){})
+		//$(document).ready(function(){ })
+		$(function(){
+			$(".div1 p:first").text("내용1000000000000")
+
+			$(".div1 p.active").removeClass("active").addClass("on")
+
+			//div클래스태그 안에 p의 2번째안의 a
+			$(".div1 p:eq(2) a").attr("href","http://wwww.naver.com")
+
+
+			//div1 클래스 태그 안에 p의3번째 자식의 input태그
+			//value 값을 변경
+			$(".div1 p:eq(3) input").val("Korea")
+
+			//p제일 처음 자손의 다음
+			$(".div2 p:first").after("<p>After(추가)</p>")
+
+			//p처음 자손 앞
+			$(".div2 p:first").before("<p>Before(추가2)</p>")
+
+			$(".div2 p:last").before("<p>성민</p>")
+
+
+			//div3안 p태그를 감싸고있는 것을 제거
+			$(".div3 p").unwrap().wrapInner("<u/>").css("color","red")
+			//h1상위 div태그를 제거
+			$("div h1").text("잠와요").css("color","blue").unwrap().wrapInner("<u/>")
+		})
+	</script>
+</head>
+<body>
+	<div class="div1">
+		<p>텍스트1</p>
+		<p class=active>내용2</p>
+		<p> <a href="#">네이버</a></p>
+		<p><input type="text" value="hello"></p>
+	</div>
+
+	<div class="div2">
+		<p><b>내용5</b></p>
+		<p>내용6</p>
+	</div>
+
+	<div class="div3" style="background-color: cyan;">
+		<div style="background-color: yellow;" >
+			<p>내용7</p>
+			<p>내용8</p>
+		</div>
+	</div>
+	
+	<div>
+		<h1>
+			h1 in div
+		</h1>
+	</div>
+</body>
+</html>

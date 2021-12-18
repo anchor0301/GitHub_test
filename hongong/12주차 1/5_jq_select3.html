@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(function(){
+		
+			$("div>p:nth-child(5)").css("color","red").html("<h1><u>div안 마지막 p</u></h1>")
+			$("div").css("border","3px dotted black")
+			$("#bt1").html("<p>마지막 자식</p>").css("color","blue").css("fontSize","40px")
+			
+				$("body").css("background-color","yellow")
+				$(".box1").css("background-color","lightgreen")
+				$("p").css("color","red")
+				$("div>p:nth-child(2)").css("background-color","orange")
+				$("body>p:nth-child(4)").css("background-color","orange")
+				//바디 밑 자손
+				.prev().css("background-color","pink")
+				.next().css("background-color","blue")
+		})
+	</script>
+</head>
+<body>
+	<div class="box1">
+		<p>div 안 p1 1</p>
+		<p>div 안 p1 2</p>
+		<p>div 안 p1 3</p>
+		<p>div 안 p1 4</p>
+		<p>div 안 p1 5</p>
+	</div>
+	<p>내용1</p>
+	<p>내용2</p>
+	<p>내용3</p>
+	<p>내용4</p>
+	<p>내용5</p>
+	<button id="bt1">테스트</button>
+</body>
+</html>

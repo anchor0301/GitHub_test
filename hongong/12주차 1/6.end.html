@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src="../../jquery-3.6.0.min.js">
+		
+	</script>
+</head>
+<body>
+	<h3>문단0</h3>
+	<h3>문단<u>1</u></h3>
+	<h3>문단<span>2</span></h3>
+	<h3>문단3</h3>
+	<h3>문단4<img src="img/lion.png" id="img1" alt=""></h3>
+	<button id="bt1">동작1</button>
+	<button id="bt2">동작2</button>
+
+	<script >
+		$("h3").filter(":even").css("background-color","pink").css("width","50%").end()
+			.filter(":has(span)").css("border","dotted")
+
+		
+		$("#bt1").click(function(){
+			$("div").remove()
+			$("body").append("<ht><div>div를 append</div>")
+				$("#img1").attr("src","img/audio.png")
+
+		})
+		$("#bt2").click(function(){
+			$("div").revmoe() //div 삭제
+			$("body").prepend("<div>div를 prepend</div><hr>")
+
+		})
+	</script>
+</body>
+</html>

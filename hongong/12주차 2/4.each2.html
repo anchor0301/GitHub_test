@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src="../../jquery-3.6.0.min.js">
+		
+	</script>
+</head>
+<body>
+	<h3>문단0</h3>
+	<h3>문단1</h3>
+	<h3>문단2</h3>
+	<h3>문단3</h3>
+	<h3>문단4</h3>
+
+	<script>
+		let arColor=["yellow","red","green","blue","gray"]
+		//let hx=$("h3")  //var hx=document.getElementsByTagName("h3")
+		//자바스크립트 버전
+		let hx=document.getElementsByTagName("h3")
+		for(let i=0;hx.length;i++){
+			hx[i].style.backgroundColor=arColor[i]
+			hx[i].style.width=10*(i+1)+"%"
+		}
+	
+
+		//이것을 자바 스크립트 버전으로 바꿔보렴
+		
+/*		for(let i=0;i<hx.length;i++){
+			hx.eq(i).css("background-color",arColor[i])
+				.css("width",10*(i+1)+"%")
+		}
+*/
+
+//each 사용
+	/*	function setColor(index,a){
+			$(a).css("background-color",arColor[index])
+		}
+		$("h3").each(setColor)
+	*/</script>
+</body>
+</html>

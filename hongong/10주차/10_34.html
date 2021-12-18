@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title>탐색 선택자</title>
+	<style>
+		
+	</style>
+	<script src ="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#sample1").hide()
+			
+			$("#xx li:nth-child(2n+1)")
+				.css("color","blue")
+				.css("background","yellow")
+				.css("width","75%")
+
+			$("#xx li:nth-child(2n)")
+				.css("color","yellow")
+				.css("background","gray")
+				.css("width","50%")
+
+			$("#xx h2")
+				.css("color",'darkgreen')
+
+			$("#xx li:first")
+				.css("background","blue")
+				.css("color","tomato")
+
+			$("#xx li").next()
+				.css("fontSize","50px")
+				.css("color","black")
+					.next()
+					.css("color","pink")
+			$("#xx li:last")
+				.css("color","black")
+
+			$("#xx li").prev()
+				.css("color","white").css("background","black")
+
+			$("body")
+				.css("background","yellow")
+
+			
+			$("ol li")
+				.css("background","cyan")
+				.css("color","rgb(239,22,15)")
+
+
+		})//document ready
+
+	</script>
+</head>
+<body>
+	<div id="sample1">이 div를 삭제하고 싶다.</div>
+	<h2>탐색 선택자</h2>
+	<hr>
+	<ul id="xx">
+		<li>자바스크립트</li>
+		<li>알고리즘</li>
+		<li>자바2</li>
+		<li><h2>파이썬</h2></li>
+		<li>English</li>
+		<li>....</li>
+		<li>****</li>
+	</ul>
+
+	<ol>
+		<li>javaScript</li>
+		<li>algorithm</li>
+		<li>java2</li>
+		<li><h2>Python</h2></li>
+		<li>영어</li>
+		<li>....</li>
+		<li>***</li>
+	</ol>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.createElement("h1")
+        const print=(event)=>{
+            let output=''
+            output+=`alt: ${event.altKey}<br>`
+            output+=`ctrl: ${event.ctrlKey}<br>`
+            output+=`shift: ${event.shiftKey}<br>`
+            h1.innerHTML=output
+        }
+        document.body.appendChild(h1)
+        document.addEventListener("keydown",print)
+        document.addEventListener("keyup",print) 
+        })
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+    <h1>글자 수 : 0</h1>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    
+    </html>

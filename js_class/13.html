@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body{background-color: yellow;}
+		div{
+			padding: 20px;
+			border :1px dotted red
+		}
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+					  //이벤트 헨들러
+		//document.addEventListener("DOMContentLoaded",function(){ })
+			$(document).mousemove(function(e){
+				$("#log").text("e.page X: "+e.pageX+"e. page Y"+e.pageY)
+			})
+			
+		})
+	</script>
+</head>
+<body>
+	<div id="log"> </div>
+	<script>
+	//	$(document).mousemove(function(e){
+	//		$("#log").text("e.pageX: "+e.pageX+", e.pageY: "+e.pageY)})
+		
+	</script>
+</body>
+</html>

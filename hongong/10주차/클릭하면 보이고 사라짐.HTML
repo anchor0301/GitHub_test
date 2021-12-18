@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title>실습</title>
+	<style >
+	
+	</style>
+		
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$("div")
+			.css("border","3px dotted red")
+			.css("height","200px")
+			.css("width","200px")
+			.css("background-color","yellow")
+			.css("text-align","center")
+			
+			$("#on").click(function(){
+				$("div").hide(1000)
+			.css("border-radius","100px")
+			$("h1:nth-child(4)").css("color","red")
+			})
+
+
+			$("#hid").click(function(){
+				$("div").show(1000)
+			.text("성민")
+			
+			$("h1:nth-child(4)").css("color","blue")
+			})
+
+			
+		})
+
+	</script>
+</head>
+<body>
+	<h1 id="on">클릭하면 사라짐</h1>
+	<h1 id="hid">클릭하면 보인다</h1>
+	<div>Show and hide</div>
+	<h1> 성민</h1>
+	<h1>노트북</h1>
+</body>
+</html>

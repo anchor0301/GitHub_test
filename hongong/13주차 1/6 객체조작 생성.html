@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+	<script>
+		$(function(){
+			//선택한 요소의 하위 요소를 가져와 문자열로 
+			var result_1=$("#sec_1").html(); 
+			console.log(result_1)
+			
+			//sec_1의 자손
+			$("#sec_1 p").html("<a href=\"#\">시계</a>")
+
+			//선택한 요소의 텍스트만 가져온다
+			var result_2=$("sec_2").text()
+			console.log(result_2)
+
+			//하위 요소 제거하고 새 텍스트 생성
+			$("#sec_2 h2").text("text()")
+			$("#sec_1>h2").css("color","red")
+			$("#sec_2 p").css("color","blue").text("성민")
+			document.getElementById
+		})
+	</script>
+</head>
+<body>
+	<h1>객체 조작 및 생성</h1>
+	<section id="sec_1" style="border:1px dotted red">
+		<h2><em>html()</em></h2>
+		<p>내용1</p>
+	</section>
+	<section id="sec_2" style="border:1px dotted blue">
+		<h2><em>텍스트()</em></h2>
+		<p>내용2</p>
+	</section>
+</body>
+</html>

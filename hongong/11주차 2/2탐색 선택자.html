@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title>탐색 선택자</title>
+	<style>
+		
+	</style>
+	<script src="../../jquery-3.6.0.min.js">
+		
+	</script>
+
+	<script>
+		$(function(){
+			$(".OL1 li:first").css("background-color","red")
+			$(".OL1 li:nth-child(2)").css("background-color","cyan")
+
+			$("#menu li:last").css("background-color","cyan")
+			$("#oo li:first").css("background-color","yellow")
+			$(".OL1 li:eq(2)").css("background-color","pink")
+			$("#menu li:eq(0)").css("background-color","red")
+			
+			$("#menu").css("border","5px dotted red")
+			$("#oo p:eq(0)").css("background-color","blue")
+		})
+	</script>
+</head>
+<body>
+	<h1>탐색 선택자 </h1>
+	<ol class="OL1">
+		<li>ol0</li>
+		<li>ol1</li>
+		<li>ol2</li>
+		<li>ol3</li>
+		<li>ol4</li>
+	</ol>
+
+	<ul  id="menu">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+		<li>추가한 내용-->last 요소</li>
+	</ul>
+
+	<ul id='oo'>
+		<li>내용2-1</li>
+		<li>내용2-2</li>
+		<p>what??</p>
+		<li>내용2-3</li>
+		<li>내용2-4</li>
+		<li>추가한 내용2-5-->last 요소</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: relative;
+		}
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+	<script>
+		$(function () {
+
+			$(".box").click(function () {
+				$(this).animate({
+					left: "100px",
+					top: "100px",
+					backgroundColor: "#f00"
+				}, 1000)
+
+				$("body").css("background-color", "ligthyellow")
+			})
+
+
+			$(".box").hover(function () {
+				$(this).css("background", "gold").text("hover On")
+			}, function () {
+				$(this).css("background", "gray").text("mouseOut상태")
+			})
+
+
+			$("#bt1").click(function () {
+				$(".box").animate({
+					left: "0px",
+					top: "0px"
+				}, 1000)
+			})
+//padein padeout show hide 가 animate의 일종
+		})
+	</script>
+</head>
+
+<body>
+	<div class="box"></div>
+	<button id="bt1">중지</button>
+
+
+	
+</body>
+
+</html>

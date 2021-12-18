@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		div {
+			border: 1px solid black;
+			width: 100px;
+			height: 100px;
+			position: relative;
+		}
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+	<script>
+		$(function () {
+			list_a = [1,2,3,4,5,6,7]
+			a=0
+			$("#div1").hover(function(){
+				$("#div1").css("background","red")
+			},$("#div1").css("background","yellow"))
+			tt = 0
+
+
+			$("#bt1").click(function () {
+
+				document.title=tt+"번클릭중"
+				if (tt % 2 == 0) {
+					$("#div1").animate({
+						left: "+=100",
+						top: "+=100"
+					}, 100)
+					tt++
+				} else {
+					$("#div1").animate({
+						left: "+=100",
+						top: "-=100"
+					}, 100)
+					tt++
+				}
+				$("p:nth-child(6)").text("집가자")
+			})
+
+			$("#re").click(function(){
+				$("#div1").animate({
+					left:"0",
+					top:"0"
+				},100)
+				
+				$("p:nth-child(6)").text("성민이 바보")
+			})
+		
+///////////////////       따로 따로  /////////////////////
+			list_a = [1,2,3,4,5,6,7]
+			$(list_a).each(function(index,value){
+				a+=value
+
+			})
+			$("#text").append(a)
+/////////////////////////    필터함수  //////////////////////////
+			list_a = [1,2,3,4,5,6,7]
+			const fil = list_a.filter(function(value){
+				return value%2==0
+			})
+			$("#filter").append(fil)
+		
+		})
+	</script>
+</head>
+
+<body>
+	<p>마우스 올리면 몇번 클릭했는지 나오게 해봐</p>
+	<p>리셋 버튼도 만들어</p>
+	<div id="div1">마우스 올리세요</div>
+	<div id="div2">몇번 클릭헀을깎?</div>
+	<hr>
+	<p>성민이 바보</p>
+	<button id="bt1">클릭</button>
+	<button id ="re">초기화</button>
+	<p id="text">aa</p>
+	<br>
+	<p id="filter"></p>
+</body>
+
+</html>

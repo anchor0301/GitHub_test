@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		div{
+			margin: 2px;
+			width: 100px;
+			height: 100px;
+			position: relative;
+			background-color: bisque;
+		}
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+	<script>
+		$(function(){
+			$("#bt1").click(function(){
+				$("#box").animate({
+					left:"+=100",
+					top:"+=100",
+					backgroundColor:"yellow"
+				},100)
+			})
+
+			$("#bt2").click(function(){
+				$("#box").animate({
+					left:"+=100",
+					top:"-=100"
+				},100)
+			})
+			$("#bt3").click(function(){
+				$("#box").animate({
+					top:"0px",
+					left:"0px"
+				})
+			})
+
+			$("#bt4").click(function(){
+				$("#box").css("width","+=50px").css("height","+=50px")
+			
+			})
+		})
+	</script>
+</head>
+<body>
+	<button id="bt1">동작1</button>
+	<button id="bt2">동작2</button>
+	<button id="bt3">초기화</button>
+	<button id="bt4"> 커저라!</button>
+	<div id="box"></div>
+</body>
+</html>

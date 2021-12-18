@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		#box,#imgBox {
+			width: 150px;
+			height: 150px;
+			border: black 1px solid;
+			position: relative;
+		}
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+	<script>
+		$(function () {
+
+			list=[1,2,3,4,5,6,7,8,9]
+			count=0
+			/////////누르면 이동함//////////
+			$('#bt1').click(function () { 
+				$("#box").animate({
+					left:"+=100",
+					top:"+=100"
+				},100)
+				count++
+				console.log(count)
+			})//bt1
+			///////////누르면 초기화 //////////
+			$("#bt2").click(function(){ 
+				$("#box").animate({
+					left:"0",
+					top:"0"
+				},100)
+			})//bt2 
+
+			$("#bt1").mousedown(function(){
+				$("body").css("background","cyan")
+			})
+			/////마우스 올리면 색 변함///////
+			$('#box').hover(function () { //hover 
+				$(this).css('background', 'red')
+			}, function () {
+				$(this).css('background', 'yellow')
+			}) //hover
+
+			$("#img").click(function(){ //클릭하면 이미지 바뀜
+				$(this).attr("src","hongong/12주차 1/img/lion.png")
+			})
+
+			const filt=list.filter(function(value){
+				return value%2==0
+				
+			})
+			a=0
+			$(filt).each(function(index,value){
+				a+=value
+			})
+			$("#h").append(a)
+		}) //function
+	</script>
+</head>
+
+<body>
+	<Button id='bt1'> 클릭 </Button>
+	<Button id="bt2"> 초기화</Button>
+	<div id='box'>
+
+	</div>
+	<Button id="bt3">사진 삭제</Button>
+	
+
+		<img id="img" src="sky.jpg" alt="" width="300px" height="300px">
+	
+
+
+	<p id="h">여기</p>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+        
+<head>
+    <meta charset="UTF-8">
+    <title>나이 계산하기</title>
+    <style>
+        body{
+            margin-left: 50px;
+        }
+    </style>
+  <script>
+    function calc(){
+        var currentYear = 2021;
+        var a=prompt("태어난 연도 입력")
+        var age = currentYear-a+1;
+        document.querySelector("#result").innerHTML="당신의 나이는 "+age+" 살 입니다.  <hr>"
+        
+    }
+</script>
+</head>
+<body>
+    <h1>나이 계산기</h1>
+    <button class="btn" onclick="calc()">나이 계산하기</button>
+   
+     <div id="result">(나이 표시)</div>
+     <a href="/main.html"> 되돌아가기</a>
+</body>
+</html>

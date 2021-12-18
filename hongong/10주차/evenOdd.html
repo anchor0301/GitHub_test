@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	=
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		let count=0
+		$(function(){
+			$("body").css("background","lightgreen")
+			$('h1:odd').css("background-color","red")
+
+
+			$("button#bt1").click(function(){
+				$(this).css("background-color","pink")
+				$("button#bt2").css("background-color","white")
+
+
+				$("h1:even").css("background-color","gold")
+				$("h1:nth-child(5)").css("background-color","silver")
+
+				$(this).text(count)
+				//누르면 카운트 되는함수
+				
+
+			})
+
+			$("button#bt2").click(function(){
+				
+				$(this).css("background-color","pink")
+				$("button#bt1").css("background-color","white")
+
+				$("h1:odd").css("background-color","silver")
+				$("h1:nth-child(3)").css('background-color',"red")
+			})
+			
+			})
+		
+	</script>
+</head>
+<body>
+	<h1>HeaderA</h1>
+	<h1>HeaderB</h1>
+	<h1>HeaderC</h1>
+	<h1>HeaderD</h1>
+	<h1>H1....5</h1>
+	<button id="bt1">Change odd!</button>
+	<button id="bt2">Change even!</button>
+</body>
+</html>

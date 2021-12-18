@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <style>
+ </style>
+</head>
+<body>
+  <script>
+  document.addEventListener("DOMContentLoaded",()=>{
+    let status = false;
+	const checkbox = document.querySelector("input");
+	const link = document.querySelector("a");
+	checkbox.addEventListener("change", (event)=>{
+	 status = event.currentTarget.checked;
+	});
+	link.addEventListener("click", (event)=>{
+     if(!status){
+	   event.preventDefault();
+	 }
+	});
+  });
+ </script>
+ <input type="checkbox">
+ <span>링크 활성화</span>
+ <br>
+ <a href="http://www.naver.com" target="blank">네이버로 가자!</a>
+</body>
+</html>

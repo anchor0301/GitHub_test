@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+
+</head>
+<body>
+	<!-- <p id="aa"></p>
+	<p id="xx"></p>
+
+	<script>
+		var Arr=[10,20,30,40,50,60]
+		var sum=0
+		for(var i=0;i<Arr.length;i++){
+			sum+=Arr[i]
+		}
+		$("#aa").append("<br>["+Arr+"]<hr>").css("color","blue")
+		$("#xx").append("합="+sum)
+	</script> -->
+
+
+
+	<p>합...</p>
+	<script>
+//		forEach메소드
+		var js_sum=0
+		var jQ_sum=0
+		var Aa=[10,20,30,40,50]
+		Aa.forEach(function(value,index){
+			$("p").text(Aa)
+			js_sum+=value
+		})
+		$("p").append("<br>    (자스크립트 foreach)합="+js_sum)
+
+// 		제이쿼리 each 메소드
+		$(Aa).each(function(index,value){
+			jQ_sum+=value
+		})
+		$("p").append("<hr>     (제이쿼리 each) 합="+jQ_sum)
+	</script>
+</body>
+</html>

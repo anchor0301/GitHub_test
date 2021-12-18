@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>연암공대</title>
+	<style>
+
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+	<h1>연암공과대학교</h1>
+	<ol>
+		<li>1st list</li>
+		<li>2nd list</li>
+	</ol>
+	<div id="d1">div 요소</div>
+
+	<script>
+		$(function(){
+			$('h1').css('background',"pink").css("font-size",20)
+			$("li").css('background',"yellowgreen")
+			$("#d1").css("background","yellow")
+			.css("width","50%").css("fontSize","50px")
+			.css("border","5px dotted red")
+		})
+		//마우스를 올리면 gray색으로 바뀜
+	
+		$("#d1").mouseover(function(){
+			$("h1").hide(1000)
+			$(this).css("background-color","gray")
+			.css("color","yellow")
+		})
+
+		//마우스를 때면 다시 돌아감
+		$("#d1").mouseout(function(){
+			$("h1").show(1000)
+			$(this).css("background-color","yellow").css("color","black")
+		})
+	</script>
+</body>
+
+</html>

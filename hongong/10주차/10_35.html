@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>clickText</title>
+	<style>
+
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function () { //DOM을 위치 상관없이 다 읽을수 있게한다.
+			$("body").css("background", "cyan")
+
+		})
+
+	</script>
+
+</head>
+
+<body>
+
+	<div>
+
+		<p>첫번째 div</p>
+	</div>
+	<h3>제목입니다</h3>
+	<h3>클릭하세요</h3>
+
+	<h3>이것도요</h3>
+	<h3>마우스 올려</h1>
+	<script>
+		$("h3").click(function () {
+			$(this).text("클릭했습니다.")
+		})
+
+		$("h3:nth-child(2").mouseover(function () {
+			$(this).text("마우스가 글위로 올라갔네")
+			$(this).css("color","red").css("font-size",23)
+			$("div").css("background-color", "red")
+			$("body").css("background-color","blue")
+		
+		})
+
+		$("h3:nth-child(2)").mouseout(function () {
+			$(this).text("마우스가 글 밖으로 나갔네요")
+			$(this).css("color", "black").css("font-size", 20)
+			$("body").css("background-color", "yellow")
+		
+		})
+
+		$("h3:last").mouseover(function(){
+			$(this).text("성민아")
+		})
+		$("h3:last").mousedown(function(){
+			$(this).text("파이팅")
+		})
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$("#bb").click(function(){
+			alert($("#xx").val())
+			$("#tt").css("background-color","cayn")
+			$(this).css("background-color","yellow")
+			$("body").append("<hr>")
+			$("#tt").prepend($("#xx").val())
+		})
+	
+	})
+</script>
+</head>
+<body id="tt">
+	이름 : <input type="text" id="xx" value=""><br>
+	<button id="bb"> Press here!</button>
+	
+</body>
+</html>

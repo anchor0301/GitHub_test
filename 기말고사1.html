@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		#box {
+			width: 100px;
+			height: 100px;
+			border: black 1px solid;
+			position: relative;
+			background-color: red;
+		}
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+	<script>
+		$(function () {
+			count = 0
+
+
+			list_a = [10, 20, 30, 40, 50, 60, 70]
+			$('#box').click(function () {
+
+				$('#box').animate({
+					left: '+=100',
+					top: '+=100'
+
+				}, 1000) //animate
+
+
+				$('#box').animate({
+					left: '+=100',
+					top: '-=100'
+
+				}, 1000) //animate
+				$('#box').animate({
+					left: '+=100',
+					top: '+=100'
+
+				}, 1000) //animate
+
+
+				$('#box').animate({
+					left: '+=100',
+					top: '-=100'
+
+				}, 1000) //animate
+
+
+
+			})//click
+
+
+
+			$('#box').hover(function () {
+				$(this).css('background', 'gold')
+				$(this).text("hover ON")
+			}, function () {
+				$(this).css('background', 'lightgray')
+				$(this).text("mouseout")
+			}) //hover
+			$("#bt1").click(function () {
+				$('#box').animate({
+					left: '0',
+					top: '0'
+
+				}, 100) //animate
+			})
+			num = 0
+			$("#bt2").click(function () {
+				document.title = num + "번클릭!"
+
+				if (num % 2 == 1) {
+					$("#cc").css("background", "cyan")
+					num++
+				} else {
+					$("#cc").css('background', "pink")
+					num++
+				}
+				$("#arry").html("<h1>배열 표시</h1>")
+
+				a = 0
+				$("#text1").html("[ " + list_a + "] <hr>")
+				$(list_a).map(function (index, value) {
+					return value
+				})
+				console.log("배열 표시 " + list_a)
+				$(list_a).each(function (index, value) {
+
+					a += value
+				})
+				$("#text").html("<p>배열 합=" + a + "</p>")
+
+				console.log("배열의 합= " + a)
+				$("#cc").show()
+				$("#bb").hide()
+
+			})
+
+
+			list_b = [1, 3, 5, 7, 9, 11, 13, 15]
+		
+				$("#bt3").click(function () {
+			$("#bb").show()
+			$("#cc").hide()
+
+
+				let aaa = list_b.map((value) => {
+
+					return value ** 2 + " "
+
+				})
+				$("#llist").html(list_b + "<br>").append(aaa)
+
+				})//bt3
+				
+			}) //function
+	</script>
+</head>
+
+<body>
+	<div id='box'>
+
+	</div>
+	<Button id='bt1'> 원 위치 </Button>
+	<Button id='bt2'> 배열 계산</Button>
+	<Button id='bt3'> map 메소드</Button>
+
+	<div id="cc">
+		<p id="arry"></p>
+		<p id="text1"></p>
+		<p id="text"></p>
+	</div>
+
+	<div id="bb">
+		<p id="list"></p>
+
+		<p id="llist"></p>
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>속성관련</title>
+	<style>
+
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			//짝수 even  홀수 odd
+			$("p:odd").css("background-color","blue").css("color","white")
+			$("p:even").css("backgroundColor","yellow").css("color","red")
+			//3배수
+			$("p:nth-child(3n)").css("background-color","cyan")
+
+			$("").css("color","blue").css("background","pink")
+		})
+		
+		
+	</script>
+	
+</head>
+
+<body>
+	<h1>h1 (1)</h1>
+	<h1>h1 (2)</h1>
+	<p id="xx"> p1 : p태그 0번째</p>
+	<p >p2 : p태그 1번째</p>
+	<p>p3 : p태그 2번째</p>
+	<p>p3 : p태그 3번째</p>
+	<p >p4 : p태그 class pp의 1번째 p태그</p>
+	<p >p5 : p태그 class pp의 2번째 p태그</p>
+	<p >p6 : p태그 class pp의 3번째 p태그</p>
+
+	
+	<script>
+		
+	</script>
+</body>
+
+</html>

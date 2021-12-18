@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+        
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+      class Rectangle{
+
+
+          constructor(width,height){
+              this.width = width
+              this.height=height
+          }
+      getArea(){
+          return this.width * this.height
+      }
+
+      getPerimeter(){return 2*(this.width + this.height)}
+        }
+
+        class Square extends Rectangle{
+            constructor (width){
+                super(width,width)
+            }
+         }
+
+        const rect = new Rectangle(5, 5)
+        console.log("너비 : ",rect.getArea())
+        console.log("둘레 : ", rect.getPerimeter())
+
+        const square = new Square(10,10)
+        console.log("1너비 : ",square.getArea())
+        console.log("1둘레 : ", square.getPerimeter())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

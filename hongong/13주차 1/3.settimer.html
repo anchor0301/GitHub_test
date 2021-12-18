@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		#xx{
+			border : 2px solid red;
+			background-color: lightyellow;
+		}
+	</style>
+	<script src='../../jquery-3.6.0.min.js'></script>
+	<script>
+		var timer
+		$(function(){
+			$("#start").click(function(){
+				timer=setInterval(function(){
+					$("#xx").html(new Date())},11)
+
+					$("body").css("background-color","cyan")
+					$("body").css("font-size","25px")
+				})
+
+				$("#stop").on("click",function(){
+					clearInterval(timer)
+					$("body").css("background-color","lightgray")
+				})
+			})
+		
+		
+	</script>
+</head>
+<body>
+	<button id="start">시작</button>
+	<button id="stop">정지</button>
+	<p id ="xx"></p>
+
+</body>
+</html>

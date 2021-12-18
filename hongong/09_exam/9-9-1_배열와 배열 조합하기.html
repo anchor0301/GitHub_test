@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <script>
+        Document.addEventLisneter
+        function createStudent(이름, 국어, 영어, 수학, 과학) {
+            return {
+                이름: 이름, 국어: 국어, 영어: 영어, 수학: 수학, 과학: 과학,
+                get총점 () {
+                    return this.국어 + this.영어 + this.수학 + this.과학
+                },
+                get평균 () {
+                    return this.get총점() / 4
+                }
+            }
+        }
+        const students = [
+            createStudent("구름",87,98,77,40),
+            createStudent("별이",92,58,36,23),
+            createStudent("겨울",79,96,94,86),
+            createStudent("바다",98,52,98,92)
+        ]
+
+        let output = "이름\t총점\t평균\n"
+        for (const student of students) {
+            output += `${student.이름}\t ${student.get총점()}\t ${student.get평균()}\n`
+        }
+        console.log(output)
+    </script>
+</head>
+
+<body></body>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>6주차 내장 객체 </title>
+  <style>
+
+  </style>
+  <script>
+      function min(array){
+            let output = array[0]
+            for(const item of array){
+                if(output>item){
+                    output=item
+                }
+            }
+            return output
+        }   
+        const testArray=[52,273,32,103,275,24,57]
+        console.log(`${testArray} 중에서`)
+        console.log(`최솟값 = ${min(testArray)}`)
+
+    const A1 =["우유","식빵"]
+    const A2 =["고구마 ",...A1,"토마토"]
+    A2.push("고구마")
+    A2.push("토마토")
+
+      console.log(A1)
+    console.log(A2)
+
+  </script>
+</head>
+
+<body>
+
+  <h1>최솟값 구하는 함수</h1>
+  <h1>나머지 매개변수 </h1>
+  
+  <p>F12를 눌러 확인</p>
+  
+</body>
+
+</html>

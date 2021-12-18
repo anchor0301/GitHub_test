@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+
+	</script>
+</head>
+
+<body>
+	<h1>h1 (1)</h1>
+	<h1>h1 (2)</h1>
+	<p>p1 : p태그 1번째</p>
+	<p id="p2">p2 : p태그 2번째</p>
+	<p>p3 : p태그 3번째</p>
+	<p class="pp">p4 : p태그 class pp의 1번째 p태그</p>
+	<p class="pp">p5 : p태그 class pp의 2번째 p태그</p>
+	<p class="pp">p6 : p태그 class pp의 3번째 p태그</p>
+
+	
+	<script>
+
+	
+	//	다중 선택
+	$("p,h2").css("color",'yellow').css("background-color","black")
+
+	//	p들중 #p2 다음태그는 전부 뻘겋게
+		$("p#p2").nextAll().css("color",'red').css("background-color","cyan")
+
+	//	p들중 #p2 다음태그는 뻘겋게
+	$("p#p2").next().css("color",'red').css("background-color","black")
+	//  p2아이디 앞의 태그
+	$("p#p2").prev().css("color",'yellow').css("background-color","blue")
+
+	
+
+
+	</script>
+</body>
+
+</html>

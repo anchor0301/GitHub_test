@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+
+	<script>
+
+		$(function(){
+			$("input").focus(function(){
+				$(this).css("background-color","yellow")
+				$("body").css("background-color","cyan")
+			})
+
+			$("input").blur(function(){
+				$(this).css("background-color","cyan")
+				$("body").css("background-color","yellow")
+			})
+		})
+
+	</script>
+</head>
+<body>
+	아이디 : <input type="text" name="name"><br>
+</body>
+</html>

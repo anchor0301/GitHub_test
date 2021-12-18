@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(function(){
+
+		})
+	</script>
+</head>
+<body>
+	<button id="btn1">hide/show</button>
+	<button id="btn2">slideToggle</button>
+	<button id="btn3">fadeToggle</button>
+	<button id="btn4">toggle</button>
+	<button id="btn5">버튼 테스트</button>
+
+	<h1 id="h1">애니메이션 대상</h1><hr>
+
+	<h1>Header1</h1>
+	<h1>Header2</h1>
+	<h1>Header3</h1><hr>
+
+	<script>
+
+		$("#btn1").click(function(){$("#h1").toggle()})
+		$("#btn2").click(function(){$("#h1").slideToggle("slow")})
+		$("#btn3").click(function(){$("#h1").fadeToggle("slow")})
+		/*window.onload=function(){
+			$('h1:not("#h1")').css("color","gold") //아이디가 h1이 아닌것
+			.css("background-color","red")
+			
+			$("#btn4").click(function(){ //btn4를 클릭하면 
+			//	$('h1:not("#h1")').css("background-color","blue").slideToggle()
+				$('h1:odd').fadeToggle("slow").css("background-color","blue")
+			})
+		}*/
+		
+		//nth-child() 이용  1부터
+		$("h1:nth-child(5)").css("background-color","red").css("color","yellow")
+		.css("border","5px dotted blue")
+		// eq() 이용  0부터
+		//$("h1:eq(0)").css("background-color","red").css("color","yellow")
+		
+		// first
+		//$("h1:first").css("background-color","red").css("color","yellow")
+
+
+		let count=0
+		$("#btn5").click(function(){
+			count+=1
+			if(count%2==0){
+				$('h1:not("#h1")').css("color","gold") //아이디가 h1이 아닌것
+			.css("background-color","red").css("width","50%")
+			}else{
+				$('h1:not("#h1")').css("color","red") //아이디가 h1이 아닌것
+			.css("background-color","blue").css("width","60%")
+			}
+
+			
+		})
+
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(function () {
+			//id가 list3인 li태그 출력
+			let idxNum = $("li").index($("#list3"))
+			console.log(idxNum)
+			//id가 list3의 다음 태그의 인덱스
+			let idx = $("li").index($("#list3").next())
+			console.log(idx)
+			$("<li>appendTo</li>").appendTo("#list3")
+			$("<li>성민</li>").appendTo("#list3").next()
+			//li 5에 파란색 성민 추가하기
+			i = $("li:eq(5)").append("<li>성민</li>")
+
+
+		})
+
+	</script>
+</head>
+
+<body>
+	<h1>배열 관련 메소드</h1>
+	<ul>
+		<li>내용1</li>
+		<li>내용2</li>
+		<li id="list3">내용3</li>
+		<li>내용4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>내용8</li>
+	</ul>
+
+	<p id="p1">p1 p1 p1</p>
+	<p>p2</p>
+	<p>p3 p3 p3 </p>
+	<p>p4 p4 p4 p4</p>
+	<script>
+
+		$("p:nth-child(4)").css("fontSize", "30px")
+
+		//li의 2번째랑 p의 마지막은 색상 빨강
+		$("li:nth-child(2),p:last").css("color","red")
+		
+
+		//not
+		$("li:not(#list3)").css("background-color","cyan")
+
+	</script>
+</body>
+
+</html>

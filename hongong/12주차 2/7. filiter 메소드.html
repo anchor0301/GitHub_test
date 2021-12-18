@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+		
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(function(){
+			$("p").filter(":contains(3)").css("background","blue")
+			$("p").filter(":contains(1)").css("background","cyan")
+			
+			$("p").filter(":contains(2)").css("background-color","pink")
+			
+			$("p:odd").filter(":contains(3)").css("background-color","red")
+			.css("fontSize","25px").css("text-align","center")
+			
+			$("p:even").filter(":contains(3)").css("color","white")
+			.css("background","pink")
+			
+			$("p:first").css({"background":"red"})
+			//2보다 큰거
+			$("p:gt(2)").css("color","blue").css("background","yellow")
+			//2보다 작은거
+			$("p:lt(2)").css("font-family","궁서체")
+			
+			$("p:eq(2)").text("p:eq(2)")
+
+			//p에서 자식이 3번째놈들이 아닌것 들만
+			$("p").filter(":contains(2)").css("background","blue")
+
+		})
+	</script>
+</head>
+<body>
+	<p>p16</p>
+	<p>p25</p>
+	<p>p34</p>
+	<p>p43</p>
+	<p>p52</p>
+	<p>p61</p>
+</body>
+</html>

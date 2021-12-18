@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+
+	</style>
+	<script src="../../jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			var n=0
+			//bt1을 클릭하면
+			$("#bt1").click(function(){
+				let x= document.getElementsByTagName("h1")
+				for(let i=0;i<=x.length;i++){
+					x[i].style.fontSize=10*(i+1)+"px"
+					
+				}
+			})
+
+			$("#bt2").click(function(){
+				//랜덤 함수 만들기
+				let r = Math.floor(Math.random()*255)
+				let g = Math.floor(Math.random()*255)
+				let b = Math.floor(Math.random()*255)
+				$("body").css("background-color","rgb("+r+","+g+","+b+")")
+				
+			})
+
+			$("#bt3").click(function(){
+				let x=document.getElementsByTagName("h1")
+				console.log(x.length)
+				for(let j=0; j<6; j++){
+					x[j].style.fontSize=10*(6-j)+"px"
+				}
+			})
+
+			$("#bt4").click(function(){
+				$("h1:odd").css("color","white")
+				$("h1:even").css("color","black")
+			})
+
+			$("#bt5").click(function(){
+				$("h1:odd").css("color","black")
+				$("h1:even").css("color","white")
+			})
+
+			$("#color").click(function(){
+				let x=document.getElementsByTagName("h1")
+				for(let i =0; i<x.length;i++){
+				
+					let r= Math.floor(Math.random()*255)
+					let g= Math.floor(Math.random()*255)
+					let b= Math.floor(Math.random()*255)
+					x[i].style.color="rgb("+r+","+g+","+b+")"
+				}
+
+			$("#bt6").click(function(){
+				
+				n++
+				document.title=n+"번 클릭!"
+				if(n%2==1){//홀수번 클릭
+					$("body").css("background-color","gold")
+				}
+				
+			})
+			})
+
+		})
+	</script>
+</head>
+
+<body>
+	
+<h1>h1(1)</h1>
+<h1>h1(2)</h1>
+<h1 id="me">h1(3)</h1>
+<h1>h1(4)</h1>
+<h1>h1(5)</h1>
+<h1>h1(6)</h1>
+<button id="bt1">버튼1</button>
+<button id="bt2">버튼2</button>
+<button id="bt3">버튼3</button>
+<button id="bt4"> 홀수 </button>
+<button id="bt5">짝수</button>
+<button id="color">색상 변경</button>
+<button id="bt6">교수님의 홀수</button>
+</body>
+
+</html>
